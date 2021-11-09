@@ -1,0 +1,26 @@
+<h1>My tasks for today 📝 </h1>
+<% @tasks.each do |task| %>
+  <div id="task-container">
+    <% if task.completed %>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="flexCheckChecked"
+          checked
+        />
+      </div>
+    <% else %>
+      <div class="form-check">
+        <input
+        class="form-check-input"
+        type="checkbox"
+        value=""
+        id="flexCheckDefault"
+        />
+      </div>
+     <% end %>
+     <span><%= link_to task.title, task_path(task) %></span>
+  </div>
+<% end %>
