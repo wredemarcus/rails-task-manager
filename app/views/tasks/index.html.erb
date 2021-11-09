@@ -21,6 +21,11 @@
         />
       </div>
      <% end %>
-     <span><%= link_to task.title, task_path(task) %></span>
+     <span><%= link_to task.title, task_path(task) %> - <%= link_to '🚮', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %> </span>
   </div>
 <% end %>
+<br>
+
+<div class="btn adding_task_button">
+  <%= link_to 'Add a new task', new_task_path %>
+</div>

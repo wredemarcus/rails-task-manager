@@ -1,0 +1,6 @@
+<%= simple_form_for(task) do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <span> Completed </span> <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
