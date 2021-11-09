@@ -2,24 +2,9 @@
 <% @tasks.each do |task| %>
   <div id="task-container">
     <% if task.completed %>
-      <div class="form-check">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="flexCheckChecked"
-          checked
-        />
-      </div>
+      <i class="fas fa-check-square"></i>
     <% else %>
-      <div class="form-check">
-        <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="flexCheckDefault"
-        />
-      </div>
+      <i class="far fa-square"></i>
      <% end %>
      <span><%= link_to task.title, task_path(task) %> - <%= link_to '🚮', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %> </span>
   </div>

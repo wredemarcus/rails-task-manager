@@ -1,29 +1,12 @@
 <h1><%= @task.title %></h1>
 <h3><%= @task.details %></h3>
 <div class="completion-field">
-  <% if @task.completed %>
-    <div class="form-check">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        value=""
-        id="flexCheckChecked"
-        checked
-      />
-    </div>
-    <span> Task is completed <span>
-  <% else %>
-    <div class="form-check">
-      <input
-      class="form-check-input"
-      type="checkbox"
-      value=""
-      id="flexCheckDefault"
-      />
-    </div>
-    <span> Task is not completed <span>
-    <% end %>
+    <% if @task.completed %>
+      <i class="fas fa-check-square"></i>  <span>Task is completed <span>
+    <% else %>
+      <i class="far fa-square"></i>  <span>Task is not completed <span>
+     <% end %>
  </div>
 
 <p><%= link_to 'Back to all Tasks', tasks_path %> </p>
-<p><%= link_to 'Edit this Task', edit_task_path %> </p>
+<p><%= link_to 'Edit this', edit_task_path %> </p>
